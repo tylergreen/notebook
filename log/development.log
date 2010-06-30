@@ -1,0 +1,427 @@
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateResearchers (20100630041604)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "researchers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100630041604')[0m
+Migrating to CreateNotebooks (20100630041735)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "notebooks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "researcher_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100630041735')[0m
+Migrating to CreateExperiments (20100630041931)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "experiments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "project_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100630041931')[0m
+Migrating to CreateProjects (20100630042001)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100630042001')[0m
+Migrating to CreatePages (20100630042059)
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateResearchers (20100630041604)
+Migrating to CreateNotebooks (20100630041735)
+Migrating to CreateExperiments (20100630041931)
+Migrating to CreateProjects (20100630042001)
+Migrating to CreatePages (20100630042059)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateResearchers (20100630041604)
+Migrating to CreateNotebooks (20100630041735)
+Migrating to CreateExperiments (20100630041931)
+Migrating to CreateProjects (20100630042001)
+Migrating to CreatePages (20100630042059)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TABLE "pages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "text" text, "notebook_id" integer, "experiment_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100630042059')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("experiments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("notebooks")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("pages")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("projects")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("researchers")[0m
+
+
+Processing ResearchersController#index (for ::1 at 2010-06-29 23:30:42) [GET]
+  [4;36;1mResearcher Load (0.8ms)[0m   [0;1mSELECT * FROM "researchers" [0m
+Rendering template within layouts/researchers
+Rendering researchers/index
+Completed in 79ms (View: 14, DB: 1) | 200 OK [http://localhost/researchers]
+
+
+Processing ResearchersController#new (for ::1 at 2010-06-29 23:30:44) [GET]
+Rendering template within layouts/researchers
+Rendering researchers/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/researchers/new]
+
+
+Processing ResearchersController#create (for ::1 at 2010-06-29 23:30:48) [POST]
+  Parameters: {"researcher"=>{"name"=>"Harold"}, "commit"=>"Create", "authenticity_token"=>"8AJlKGrhbXCR2LjZjjOG/he/tUHE7hixcZ3tzdx/MNQ="}
+  [4;35;1mResearcher Create (0.5ms)[0m   [0mINSERT INTO "researchers" ("name", "created_at", "updated_at") VALUES('Harold', '2010-06-30 04:30:48', '2010-06-30 04:30:48')[0m
+Redirected to http://localhost:3000/researchers/1
+Completed in 19ms (DB: 1) | 302 Found [http://localhost/researchers]
+
+
+Processing ResearchersController#show (for ::1 at 2010-06-29 23:30:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mResearcher Load (0.1ms)[0m   [0;1mSELECT * FROM "researchers" WHERE ("researchers"."id" = 1) [0m
+Rendering template within layouts/researchers
+Rendering researchers/show
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/researchers/1]
+
+
+Processing ResearchersController#index (for ::1 at 2010-06-29 23:30:51) [GET]
+  [4;35;1mResearcher Load (0.5ms)[0m   [0mSELECT * FROM "researchers" [0m
+Rendering template within layouts/researchers
+Rendering researchers/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/researchers]
+
+
+Processing ResearchersController#new (for ::1 at 2010-06-29 23:30:53) [GET]
+Rendering template within layouts/researchers
+Rendering researchers/new
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/researchers/new]
+
+
+Processing ResearchersController#create (for ::1 at 2010-06-29 23:31:02) [POST]
+  Parameters: {"researcher"=>{"name"=>"Jerald"}, "commit"=>"Create", "authenticity_token"=>"8AJlKGrhbXCR2LjZjjOG/he/tUHE7hixcZ3tzdx/MNQ="}
+  [4;36;1mResearcher Create (0.5ms)[0m   [0;1mINSERT INTO "researchers" ("name", "created_at", "updated_at") VALUES('Jerald', '2010-06-30 04:31:02', '2010-06-30 04:31:02')[0m
+Redirected to http://localhost:3000/researchers/2
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/researchers]
+
+
+Processing ResearchersController#show (for ::1 at 2010-06-29 23:31:02) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mResearcher Load (0.1ms)[0m   [0mSELECT * FROM "researchers" WHERE ("researchers"."id" = 2) [0m
+Rendering template within layouts/researchers
+Rendering researchers/show
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/researchers/2]
+
+
+Processing ResearchersController#index (for ::1 at 2010-06-29 23:31:04) [GET]
+  [4;36;1mResearcher Load (0.5ms)[0m   [0;1mSELECT * FROM "researchers" [0m
+Rendering template within layouts/researchers
+Rendering researchers/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/researchers]
+
+
+Processing NotebooksController#index (for ::1 at 2010-06-29 23:31:27) [GET]
+  [4;35;1mNotebook Load (0.4ms)[0m   [0mSELECT * FROM "notebooks" [0m
+Rendering template within layouts/notebooks
+Rendering notebooks/index
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/notebooks]
+
+
+Processing NotebooksController#new (for ::1 at 2010-06-29 23:31:29) [GET]
+Rendering template within layouts/notebooks
+Rendering notebooks/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/notebooks/new]
+
+
+Processing NotebooksController#create (for ::1 at 2010-06-29 23:31:34) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8AJlKGrhbXCR2LjZjjOG/he/tUHE7hixcZ3tzdx/MNQ=", "notebook"=>{"researcher"=>"Harold"}}
+
+ActiveRecord::AssociationTypeMismatch (Researcher(#14542510) expected, got String(#111100)):
+  app/controllers/notebooks_controller.rb:43:in `new'
+  app/controllers/notebooks_controller.rb:43:in `create'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.0ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProjectsController#index (for ::1 at 2010-06-29 23:32:01) [GET]
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#new (for ::1 at 2010-06-29 23:32:03) [GET]
+Rendering template within layouts/projects
+Rendering projects/new
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#create (for ::1 at 2010-06-29 23:32:09) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8AJlKGrhbXCR2LjZjjOG/he/tUHE7hixcZ3tzdx/MNQ=", "project"=>{"name"=>"Project Vulcan"}}
+  [4;35;1mProject Create (0.4ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at") VALUES('Project Vulcan', '2010-06-30 04:32:09', '2010-06-30 04:32:09')[0m
+Redirected to http://localhost:3000/projects/1
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/projects]
+
+
+Processing ProjectsController#show (for ::1 at 2010-06-29 23:32:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/projects/1]
+
+
+Processing ProjectsController#index (for ::1 at 2010-06-29 23:32:18) [GET]
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing ApplicationController#index (for ::1 at 2010-06-29 23:32:31) [GET]
+
+ActionController::RoutingError (No route matches "/experiment" with {:method=>:get}):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ExperimentsController#index (for ::1 at 2010-06-29 23:32:38) [GET]
+  [4;36;1mExperiment Load (0.4ms)[0m   [0;1mSELECT * FROM "experiments" [0m
+Rendering template within layouts/experiments
+Rendering experiments/index
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/experiments]
+
+
+Processing ExperimentsController#new (for ::1 at 2010-06-29 23:32:40) [GET]
+Rendering template within layouts/experiments
+Rendering experiments/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/experiments/new]
+
+
+Processing ExperimentsController#create (for ::1 at 2010-06-29 23:32:59) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8AJlKGrhbXCR2LjZjjOG/he/tUHE7hixcZ3tzdx/MNQ=", "experiment"=>{"name"=>"monkey experiment", "project"=>"Vulcan"}}
+
+ActiveRecord::AssociationTypeMismatch (Project(#13908790) expected, got String(#111100)):
+  app/controllers/experiments_controller.rb:43:in `new'
+  app/controllers/experiments_controller.rb:43:in `create'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateResearchers (20100630041604)
+Migrating to CreateNotebooks (20100630041735)
+Migrating to CreateExperiments (20100630041931)
+Migrating to CreateProjects (20100630042001)
+Migrating to CreatePages (20100630042059)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("experiments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("notebooks")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("pages")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("projects")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("researchers")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePages (20100630042059)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (78.4ms)[0m   [0mDROP TABLE "pages"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100630042059'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("experiments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("notebooks")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("projects")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("researchers")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateResearchers (20100630041604)
+Migrating to CreateNotebooks (20100630041735)
+Migrating to CreateExperiments (20100630041931)
+Migrating to CreateProjects (20100630042001)
+Migrating to CreatePages (20100630042059)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "pages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "text" text, "notebook_id" integer, "experiment_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100630042059')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("experiments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("notebooks")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("pages")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("projects")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("researchers")[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePages (20100630042059)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mDROP TABLE "pages"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100630042059'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("experiments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("notebooks")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("projects")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mPRAGMA index_list("researchers")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateResearchers (20100630041604)
+Migrating to CreateNotebooks (20100630041735)
+Migrating to CreateExperiments (20100630041931)
+Migrating to CreateProjects (20100630042001)
+Migrating to CreatePages (20100630042059)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "pages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "text" text, "notebook_id" integer, "experiment_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100630042059')[0m
+Migrating to CreateResearcherProjectJoinTable (20100630044227)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "researchers_projects" ("researchers_id" integer, "projects_id" integer) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100630044227')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("experiments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("notebooks")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("pages")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("projects")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("researchers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("researchers_projects")[0m
+
+
+Processing ResearchersController#index (for ::1 at 2010-06-29 23:43:31) [GET]
+  [4;36;1mResearcher Load (1.0ms)[0m   [0;1mSELECT * FROM "researchers" [0m
+Rendering template within layouts/researchers
+Rendering researchers/index
+Completed in 65ms (View: 12, DB: 1) | 200 OK [http://localhost/researchers]
+
+
+Processing NotebooksController#index (for ::1 at 2010-06-29 23:43:43) [GET]
+  [4;35;1mNotebook Load (0.5ms)[0m   [0mSELECT * FROM "notebooks" [0m
+Rendering template within layouts/notebooks
+Rendering notebooks/index
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/notebooks]
+
+
+Processing NotebooksController#new (for ::1 at 2010-06-29 23:43:45) [GET]
+Rendering template within layouts/notebooks
+Rendering notebooks/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/notebooks/new]
+
+
+Processing NotebooksController#create (for ::1 at 2010-06-29 23:43:49) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8AJlKGrhbXCR2LjZjjOG/he/tUHE7hixcZ3tzdx/MNQ=", "notebook"=>{"researcher"=>"Harold"}}
+
+ActiveRecord::AssociationTypeMismatch (Researcher(#13421960) expected, got String(#111100)):
+  app/controllers/notebooks_controller.rb:43:in `new'
+  app/controllers/notebooks_controller.rb:43:in `create'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (88.6ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)

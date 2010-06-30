@@ -1,0 +1,16 @@
+<h1>Editing notebook</h1>
+
+<% form_for(@notebook) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :researcher %><br />
+    <%= f.text_field :researcher %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @notebook %> |
+<%= link_to 'Back', notebooks_path %>
