@@ -41,7 +41,7 @@ class ResearchersController < ApplicationController
   # POST /researchers.xml
   def create
     @researcher = Researcher.new(params[:researcher])
-
+    
     respond_to do |format|
       if @researcher.save
         flash[:notice] = 'Researcher was successfully created.'

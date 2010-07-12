@@ -425,3 +425,1090 @@ ActiveRecord::AssociationTypeMismatch (Researcher(#13421960) expected, got Strin
 Rendered rescues/_trace (88.6ms)
 Rendered rescues/_request_and_response (1.3ms)
 Rendering rescues/layout (internal_server_error)
+  [4;36;1mNotebook Create (1.0ms)[0m   [0;1mINSERT INTO "notebooks" ("created_at", "updated_at", "researcher_id") VALUES('2010-07-09 06:27:22', '2010-07-09 06:27:22', NULL)[0m
+  [4;35;1mNotebook Create (0.9ms)[0m   [0mINSERT INTO "notebooks" ("created_at", "updated_at", "researcher_id") VALUES('2010-07-09 06:27:45', '2010-07-09 06:27:45', NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mNotebook Create (1.6ms)[0m   [0mINSERT INTO "notebooks" ("created_at", "updated_at", "researcher_id") VALUES('2010-07-09 06:40:39', '2010-07-09 06:40:39', NULL)[0m
+  [4;36;1mResearcher Create (0.5ms)[0m   [0;1mINSERT INTO "researchers" ("name", "created_at", "updated_at") VALUES(NULL, '2010-07-09 06:42:12', '2010-07-09 06:42:12')[0m
+  [4;35;1mResearcher Load (0.5ms)[0m   [0mSELECT * FROM "researchers" WHERE ("researchers"."id" = 3) [0m
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" WHERE ("researchers"."id" = 2) [0m
+  [4;35;1mResearcher Load (0.2ms)[0m   [0mSELECT * FROM "researchers" WHERE ("researchers"."id" = 1) [0m
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" WHERE ("researchers"."id" = 1) [0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" LIMIT 1[0m
+  [4;36;1mResearcher Load (0.4ms)[0m   [0;1mSELECT * FROM "researchers" [0m
+  [4;35;1mResearcher Load (0.4ms)[0m   [0mSELECT * FROM "researchers" ORDER BY created_at[0m
+  [4;36;1mNotebook Load (0.3ms)[0m   [0;1mSELECT * FROM "notebooks" [0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" [0m
+  [4;36;1mResearcher Load (0.9ms)[0m   [0;1mSELECT * FROM "researchers" WHERE ("researchers"."id" = 3) [0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" WHERE ("researchers"."id" = 2) [0m
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" WHERE ("researchers"."id" = 3) [0m
+/!\ FAILSAFE /!\  Sun Jul 11 21:43:31 -0500 2010
+  Status: 500 Internal Server Error
+  Illegal route: the :controller must be specified!
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/builder.rb:175:in `build'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:308:in `add_route'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:19:in `connect'
+    /Users/jorge/cs/ruby/enova/lbook6/config/routes.rb:51
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:226:in `draw'
+    /Users/jorge/cs/ruby/enova/lbook6/config/routes.rb:1
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:145:in `load_without_new_constant_marking'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:145:in `load'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:145:in `load'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:286:in `load_routes!'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:286:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:286:in `load_routes!'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:266:in `load!'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:281:in `reload'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:59:in `reload_application'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:8:in `call'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-11 21:46:22) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 21:46:49) [GET]
+Rendering home/index
+Completed in 44ms (View: 41, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 21:48:09) [GET]
+Rendering home/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 21:48:57) [GET]
+Rendering home/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 21:50:02) [GET]
+Rendering home/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 21:50:09) [GET]
+Rendering home/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 21:50:36) [GET]
+Rendering home/index
+ERROR: compiling _run_erb_app47views47home47index46html46erb RAISED compile error
+/Users/jorge/cs/ruby/enova/lbook6/app/views/home/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ncat(( link_to 'Google' google.com ).to_s); @output_buffer.c...
+                              ^
+Function body:           def _run_erb_app47views47home47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<H1> Skills Assessment: Lab Notebook </H1>\n<H2> Tyler Green </H2>\n<H2> Enova Financial </H2>\n\n"
+
+
+
+; @output_buffer.concat(( link_to 'Google' google.com ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/jorge/cs/ruby/enova/lbook6/app/views/home/index.html.erb:9:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/jorge/cs/ruby/enova/lbook6/app/views/home/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ncat(( link_to 'Google' google.com ).to_s); @output_buffer.c...
+                              ^) on line #5 of app/views/home/index.html.erb:
+2: <H2> Tyler Green </H2>
+3: <H2> Enova Financial </H2>
+4: 
+5: <%= link_to 'Google' google.com %>
+
+    app/views/home/index.html.erb:9:in `compile!'
+
+Rendered rescues/_trace (39.8ms)
+Rendered rescues/_request_and_response (48.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 21:50:48) [GET]
+Rendering home/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 21:50:50) [GET]
+Rendering home/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 21:51:18) [GET]
+Rendering home/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 21:51:31) [GET]
+Rendering home/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 22:01:23) [GET]
+Rendering home/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-11 22:01:32) [GET]
+  [4;36;1mProject Load (19.2ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 128ms (View: 64, DB: 19) | 200 OK [http://localhost/projects]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 22:02:02) [GET]
+Rendering home/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 22:03:13) [GET]
+Rendering home/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-11 22:05:36) [GET]
+
+ActionController::RoutingError (No route matches "/notebook" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-11 22:05:39) [GET]
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 22:09:08) [GET]
+Rendering home/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-11 22:09:16) [GET]
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-11 22:16:18) [GET]
+
+ActionController::RoutingError (No route matches "/researcher" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ResearchersController#index (for 127.0.0.1 at 2010-07-11 22:16:21) [GET]
+  [4;35;1mResearcher Load (0.5ms)[0m   [0mSELECT * FROM "researchers" [0m
+
+Errno::ENOENT (No such file or directory - /Users/jorge/cs/ruby/enova/lbook6/app/views/layouts/researchers.html.erb):
+  app/controllers/researchers_controller.rb:7:in `index'
+
+Rendered rescues/_trace (90.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ResearchersController#index (for 127.0.0.1 at 2010-07-11 22:17:08) [GET]
+  [4;36;1mResearcher Load (0.5ms)[0m   [0;1mSELECT * FROM "researchers" [0m
+Rendering template within layouts/researchers
+Rendering researchers/index
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/researchers]
+
+
+Processing ResearchersController#index (for 127.0.0.1 at 2010-07-11 22:19:51) [GET]
+  [4;35;1mResearcher Load (0.5ms)[0m   [0mSELECT * FROM "researchers" [0m
+Rendering template within layouts/researchers
+Rendering researchers/index
+Completed in 10ms (View: 4, DB: 1) | 200 OK [http://localhost/researchers]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 22:19:55) [GET]
+Rendering home/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 22:21:54) [GET]
+Rendering home/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 22:24:16) [GET]
+Rendering home/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-11 22:24:18) [GET]
+
+ActionController::RoutingError (No route matches "/notebook" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-11 22:24:20) [GET]
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 22:25:43) [GET]
+Rendering home/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 22:27:37) [GET]
+Rendering home/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 22:27:58) [GET]
+Rendering home/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 22:28:29) [GET]
+Rendering home/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 22:29:02) [GET]
+Rendering home/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-11 22:29:22) [GET]
+Rendering home/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-11 22:29:28) [GET]
+
+ActionController::RoutingError (No route matches "/notebook" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-11 22:29:30) [GET]
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/projects]
+  [4;36;1mProject Load (0.7ms)[0m   [0;1mSELECT * FROM "projects" [0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" [0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" LIMIT 1[0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" LIMIT 1[0m
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM "projects" LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" LIMIT 1[0m
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mResearcher Load (0.2ms)[0m   [0mSELECT * FROM "researchers" LIMIT 1[0m
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" LIMIT 1[0m
+  [4;35;1mResearcher Load (0.2ms)[0m   [0mSELECT * FROM "researchers" LIMIT 1[0m
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" LIMIT 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateResearchers (20100630041604)
+Migrating to CreateNotebooks (20100630041735)
+Migrating to CreateExperiments (20100630041931)
+Migrating to CreateProjects (20100630042001)
+Migrating to CreatePages (20100630042059)
+Migrating to CreateResearcherProjectJoinTable (20100630044227)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("experiments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("notebooks")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("pages")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("projects")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("researchers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("researchers_projects")[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateResearchers (20100630041604)
+Migrating to CreateNotebooks (20100630041735)
+Migrating to CreateExperiments (20100630041931)
+Migrating to CreateProjects (20100630042001)
+Migrating to CreatePages (20100630042059)
+Migrating to CreateResearcherProjectJoinTable (20100630044227)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("experiments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("notebooks")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("pages")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("projects")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("researchers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("researchers_projects")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM "projects" [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" [0m
+  [4;36;1mResearcher Load (0.2ms)[0m   [0;1mSELECT * FROM "researchers" LIMIT 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateResearchers (20100630041604)
+Migrating to CreateNotebooks (20100630041735)
+Migrating to CreateExperiments (20100630041931)
+Migrating to CreateProjects (20100630042001)
+Migrating to CreatePages (20100630042059)
+Migrating to CreateResearcherProjectJoinTable (20100630044227)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("experiments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("notebooks")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("pages")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("projects")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("researchers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("researchers_projects")[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateResearchers (20100630041604)
+Migrating to CreateNotebooks (20100630041735)
+Migrating to CreateExperiments (20100630041931)
+Migrating to CreateProjects (20100630042001)
+Migrating to CreatePages (20100630042059)
+Migrating to ProjectsResearchers (20100712041727)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateResearchers (20100630041604)
+Migrating to CreateNotebooks (20100630041735)
+Migrating to CreateExperiments (20100630041931)
+Migrating to CreateProjects (20100630042001)
+Migrating to CreatePages (20100630042059)
+Migrating to ProjectsResearchers (20100712041727)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "projects_researchers" ("project_id" integer, "researcher_id" integer) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100712041727')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("experiments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("notebooks")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("pages")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("projects")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("projects_researchers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("researchers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("researchers_projects")[0m
+  [4;35;1mResearcher Load (0.7ms)[0m   [0mSELECT * FROM "researchers" LIMIT 1[0m
+  [4;36;1mProject Load (0.1ms)[0m   [0;1mSELECT * FROM "projects" INNER JOIN "projects_researchers" ON "projects".id = "projects_researchers".project_id WHERE ("projects_researchers".researcher_id = 1 ) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" LIMIT 1[0m
+  [4;36;1mResearcher Load (0.2ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" [0m
+  [4;36;1mResearcher Load (0.2ms)[0m   [0;1mSELECT * FROM "researchers" LIMIT 1[0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" [0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" LIMIT 1[0m
+  [4;36;1mResearcher Load (0.1ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" LIMIT 1[0m
+  [4;36;1mResearcher Load (0.2ms)[0m   [0;1mSELECT * FROM "researchers" [0m
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" LIMIT 1[0m
+  [4;36;1mResearcher Load (0.2ms)[0m   [0;1mSELECT * FROM "researchers" [0m
+  [4;35;1mResearcher Load (0.2ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "projects_researchers" ("project_id", "researcher_id") VALUES (1, 1)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO "projects_researchers" ("project_id", "researcher_id") VALUES (1, 2)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO "projects_researchers" ("project_id", "researcher_id") VALUES (1, 3)[0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" INNER JOIN "projects_researchers" ON "projects".id = "projects_researchers".project_id WHERE ("projects_researchers".researcher_id = 1 ) [0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-11 23:42:44) [GET]
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/projects]
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM "projects" LIMIT 1[0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" LIMIT 1[0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-11 23:47:57) [GET]
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+ERROR: compiling _run_erb_app47views47projects47index46html46erb RAISED compile error
+/Users/jorge/cs/ruby/enova/lbook6/app/views/projects/index.html.erb:17: syntax error, unexpected '<'
+     <tr> <td> researcher.name <td> </tr>
+      ^
+/Users/jorge/cs/ruby/enova/lbook6/app/views/projects/index.html.erb:17: syntax error, unexpected '<'
+     <tr> <td> researcher.name <td> </tr>
+                                     ^
+/Users/jorge/cs/ruby/enova/lbook6/app/views/projects/index.html.erb:21: unknown regexp options - tabl
+/Users/jorge/cs/ruby/enova/lbook6/app/views/projects/index.html.erb:21: syntax error, unexpected $undefined
+;  end ; @output_buffer.concat "\n\n</table>\n\n<br />\n\n"
+                                             ^
+/Users/jorge/cs/ruby/enova/lbook6/app/views/projects/index.html.erb:21: syntax error, unexpected tREGEXP_BEG, expecting kDO or '{' or '('
+;  end ; @output_buffer.concat "\n\n</table>\n\n<br />\n\n"
+                                                     ^
+/Users/jorge/cs/ruby/enova/lbook6/app/views/projects/index.html.erb:21: unterminated string meets end of file
+Function body:           def _run_erb_app47views47projects47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Listing projects</h1>\n\n<table>\n  <tr>\n    <th>Name</th>\n  </tr>\n\n"
+
+
+
+
+
+
+;  @projects.each do |project| ; @output_buffer.concat "\n  <tr>\n    <td>"
+
+; @output_buffer.concat((h project.name ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Show', project ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Edit', edit_project_path(project) ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n  </tr>\n\n  "
+
+
+;  project.researchers.each do | researcher|
+     <tr> <td> researcher.name <td> </tr>
+     <% end ; @output_buffer.concat "\n\n\n"
+
+
+;  end ; @output_buffer.concat "\n\n</table>\n\n<br />\n\n"
+
+
+
+
+
+; @output_buffer.concat(( link_to 'New project', new_project_path ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/jorge/cs/ruby/enova/lbook6/app/views/projects/index.html.erb:21:in `compile!'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `respond'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/jorge/cs/ruby/enova/lbook6/app/controllers/projects_controller.rb:7:in `index'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/jorge/cs/ruby/enova/lbook6/app/views/projects/index.html.erb:17: syntax error, unexpected '<'
+     <tr> <td> researcher.name <td> </tr>
+      ^
+/Users/jorge/cs/ruby/enova/lbook6/app/views/projects/index.html.erb:17: syntax error, unexpected '<'
+     <tr> <td> researcher.name <td> </tr>
+                                     ^
+/Users/jorge/cs/ruby/enova/lbook6/app/views/projects/index.html.erb:21: unknown regexp options - tabl
+/Users/jorge/cs/ruby/enova/lbook6/app/views/projects/index.html.erb:21: syntax error, unexpected $undefined
+;  end ; @output_buffer.concat "\n\n</table>\n\n<br />\n\n"
+                                             ^
+/Users/jorge/cs/ruby/enova/lbook6/app/views/projects/index.html.erb:21: syntax error, unexpected tREGEXP_BEG, expecting kDO or '{' or '('
+;  end ; @output_buffer.concat "\n\n</table>\n\n<br />\n\n"
+                                                     ^
+/Users/jorge/cs/ruby/enova/lbook6/app/views/projects/index.html.erb:21: unterminated string meets end of file) on line #17 of app/views/projects/index.html.erb:
+14:   </tr>
+15: 
+16:   <% project.researchers.each do | researcher|
+17:      <tr> <td> researcher.name <td> </tr>
+18:      <% end %>
+19: 
+20: 
+
+    app/views/projects/index.html.erb:21:in `compile!'
+    app/controllers/projects_controller.rb:7:in `index'
+
+Rendered rescues/_trace (43.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-11 23:48:25) [GET]
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+Completed in 24ms (View: 18, DB: 1) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-11 23:48:49) [GET]
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/projects]
+  [4;36;1mResearcher Load (0.4ms)[0m   [0;1mSELECT * FROM "researchers" [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-11 23:49:33) [GET]
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/projects]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" LIMIT 1[0m
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM "projects" LIMIT 1[0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" LIMIT 1[0m
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM "projects" LIMIT 1[0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" LIMIT 1[0m
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM "projects" LIMIT 1[0m
+  [4;36;1mResearcher Load (0.4ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;35;1mResearcher Create (0.4ms)[0m   [0mINSERT INTO "researchers" ("name", "created_at", "updated_at") VALUES('Archimedes', '2010-07-12 04:51:09', '2010-07-12 04:51:09')[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-11 23:51:15) [GET]
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/projects]
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" INNER JOIN "projects_researchers" ON "projects".id = "projects_researchers".project_id WHERE ("projects_researchers".researcher_id = 4 ) [0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "projects_researchers" ("project_id", "researcher_id") VALUES (1, 4)[0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" INNER JOIN "projects_researchers" ON "projects".id = "projects_researchers".project_id WHERE ("projects_researchers".researcher_id = 4 ) [0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-11 23:51:47) [GET]
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-07-11 23:52:06) [GET]
+Rendering template within layouts/projects
+Rendering projects/new
+Completed in 84ms (View: 78, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#create (for 127.0.0.1 at 2010-07-11 23:52:25) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"bbYqTIKpapMc8WboQ7htLw6RLurJ9HPOeU1ePZR/QEc=", "project"=>{"name"=>"Project Homoiconic"}}
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at") VALUES('Project Homoiconic', '2010-07-12 04:52:25', '2010-07-12 04:52:25')[0m
+Redirected to http://localhost:3000/projects/2
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/projects]
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2010-07-11 23:52:25) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 2) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/projects/2]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-11 23:52:28) [GET]
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+  [4;36;1mResearcher Load (0.1ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 2 ) [0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/projects]
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM "projects" ORDER BY projects.id DESC LIMIT 1[0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" ORDER BY projects.id DESC LIMIT 1[0m
+  [4;35;1mResearcher Create (0.8ms)[0m   [0mINSERT INTO "researchers" ("name", "created_at", "updated_at") VALUES('Tyler', '2010-07-12 04:53:46', '2010-07-12 04:53:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "projects_researchers" ("project_id", "researcher_id") VALUES (2, 5)[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-11 23:53:51) [GET]
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+  [4;35;1mResearcher Load (0.2ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 2 ) [0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-11 23:55:01) [GET]
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+  [4;36;1mResearcher Load (0.2ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 2 ) [0m
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-11 23:55:18) [GET]
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+  [4;35;1mResearcher Load (0.2ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 2 ) [0m
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-11 23:55:42) [GET]
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+  [4;36;1mResearcher Load (0.2ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 2 ) [0m
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-07-11 23:56:07) [GET]
+Rendering template within layouts/projects
+Rendering projects/new
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#create (for 127.0.0.1 at 2010-07-11 23:56:55) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"bbYqTIKpapMc8WboQ7htLw6RLurJ9HPOeU1ePZR/QEc=", "project"=>{"name"=>"Top Secret Erlang"}}
+  [4;35;1mProject Create (0.4ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at") VALUES('Top Secret Erlang', '2010-07-12 04:56:55', '2010-07-12 04:56:55')[0m
+Redirected to http://localhost:3000/projects/3
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/projects]
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2010-07-11 23:56:55) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mProject Load (0.1ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 3) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/projects/3]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-11 23:56:57) [GET]
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+  [4;35;1mResearcher Load (0.2ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 2 ) [0m
+  [4;36;1mResearcher Load (0.1ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 3 ) [0m
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/projects]
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" WHERE ("researchers"."id" = 5) [0m
+  [4;36;1mResearcher Load (0.2ms)[0m   [0;1mSELECT * FROM "researchers" WHERE ("researchers"."id" = 0) [0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" WHERE (name = 'Tyler') LIMIT 1[0m
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" WHERE ("researchers"."id" = 5) [0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" WHERE ("researchers"."id" = 5) [0m
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" WHERE ("researchers"."id" = 5) [0m
+  [4;35;1mProject Load (1.3ms)[0m   [0mSELECT * FROM "projects" INNER JOIN "projects_researchers" ON "projects".id = "projects_researchers".project_id WHERE ("projects_researchers".researcher_id = 5 ) [0m
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" WHERE ("researchers"."id" = 5) [0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" WHERE ("researchers"."id" = 5) [0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" ORDER BY projects.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "projects_researchers" ("project_id", "researcher_id") VALUES (3, 5)[0m
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" INNER JOIN "projects_researchers" ON "projects".id = "projects_researchers".project_id WHERE ("projects_researchers".researcher_id = 5 ) [0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-12 00:00:31) [GET]
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+  [4;35;1mResearcher Load (0.2ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 2 ) [0m
+  [4;36;1mResearcher Load (0.2ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 3 ) [0m
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/projects]
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM "projects" ORDER BY projects.id DESC LIMIT 1[0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" ORDER BY projects.id DESC LIMIT 1[0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 3 ) [0m
+  [4;36;1mResearcher Create (0.6ms)[0m   [0;1mINSERT INTO "researchers" ("name", "created_at", "updated_at") VALUES('Church', '2010-07-12 05:01:13', '2010-07-12 05:01:13')[0m
+  [4;35;1mResearcher Create (0.8ms)[0m   [0mINSERT INTO "researchers" ("name", "created_at", "updated_at") VALUES('Leibnitz', '2010-07-12 05:01:26', '2010-07-12 05:01:26')[0m
+  [4;36;1mResearcher Create (0.6ms)[0m   [0;1mINSERT INTO "researchers" ("name", "created_at", "updated_at") VALUES('Gauss', '2010-07-12 05:01:32', '2010-07-12 05:01:32')[0m
+  [4;35;1mResearcher Create (0.9ms)[0m   [0mINSERT INTO "researchers" ("name", "created_at", "updated_at") VALUES('Von Neumann', '2010-07-12 05:01:50', '2010-07-12 05:01:50')[0m
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" INNER JOIN "projects_researchers" ON "projects".id = "projects_researchers".project_id WHERE ("projects_researchers".researcher_id = 9 ) [0m
+  [4;35;1mResearcher Load (0.2ms)[0m   [0mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" ORDER BY projects.id DESC LIMIT 1[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO "projects_researchers" ("project_id", "researcher_id") VALUES (3, 9)[0m
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM "projects" INNER JOIN "projects_researchers" ON "projects".id = "projects_researchers".project_id WHERE ("projects_researchers".researcher_id = 9 ) [0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-12 00:02:26) [GET]
+  [4;35;1mProject Load (0.6ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+  [4;35;1mResearcher Load (0.2ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 2 ) [0m
+  [4;36;1mResearcher Load (0.2ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 3 ) [0m
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/projects]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-12 00:05:28) [GET]
+Rendering home/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-12 00:06:49) [GET]
+Rendering home/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ResearchersController#index (for 127.0.0.1 at 2010-07-12 00:06:51) [GET]
+  [4;35;1mResearcher Load (0.6ms)[0m   [0mSELECT * FROM "researchers" [0m
+Rendering template within layouts/researchers
+Rendering researchers/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/researchers]
+
+
+Processing ResearchersController#show (for 127.0.0.1 at 2010-07-12 00:06:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mResearcher Load (0.1ms)[0m   [0;1mSELECT * FROM "researchers" WHERE ("researchers"."id" = 1) [0m
+Rendering template within layouts/researchers
+Rendering researchers/show
+Completed in 27ms (View: 21, DB: 0) | 200 OK [http://localhost/researchers/1]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-12 00:07:00) [GET]
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+  [4;35;1mResearcher Load (0.2ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 2 ) [0m
+  [4;36;1mResearcher Load (0.2ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 3 ) [0m
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-12 00:07:36) [GET]
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+  [4;35;1mResearcher Load (0.2ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 2 ) [0m
+  [4;36;1mResearcher Load (0.2ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 3 ) [0m
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-12 00:08:25) [GET]
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+  [4;35;1mResearcher Load (0.2ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 2 ) [0m
+  [4;36;1mResearcher Load (0.2ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 3 ) [0m
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#edit (for 127.0.0.1 at 2010-07-12 00:08:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/edit
+Completed in 62ms (View: 56, DB: 0) | 200 OK [http://localhost/projects/1/edit]
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "projects_researchers" ("project_id", "researcher_id") VALUES (1, 9)[0m
+  [4;35;1mProject Load (0.4ms)[0m   [0mSELECT * FROM "projects" INNER JOIN "projects_researchers" ON "projects".id = "projects_researchers".project_id WHERE ("projects_researchers".researcher_id = 9 ) [0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-07-12 00:09:10) [GET]
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+  [4;35;1mResearcher Load (0.5ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 1 ) [0m
+  [4;36;1mResearcher Load (0.2ms)[0m   [0;1mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 2 ) [0m
+  [4;35;1mResearcher Load (0.2ms)[0m   [0mSELECT * FROM "researchers" INNER JOIN "projects_researchers" ON "researchers".id = "projects_researchers".researcher_id WHERE ("projects_researchers".project_id = 3 ) [0m
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/projects]
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;35;1mNotebook Load (0.2ms)[0m   [0mSELECT * FROM "notebooks" WHERE ("notebooks".researcher_id = 9) LIMIT 1[0m
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;35;1mNotebook Load (0.2ms)[0m   [0mSELECT * FROM "notebooks" WHERE ("notebooks".researcher_id = 9) LIMIT 1[0m
+  [4;36;1mNotebook Create (0.6ms)[0m   [0;1mINSERT INTO "notebooks" ("created_at", "updated_at", "researcher_id") VALUES('2010-07-12 05:15:04', '2010-07-12 05:15:04', 9)[0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;36;1mNotebook Load (0.2ms)[0m   [0;1mSELECT * FROM "notebooks" WHERE ("notebooks".researcher_id = 9) LIMIT 1[0m
+  [4;35;1mResearcher Load (0.5ms)[0m   [0mSELECT * FROM "researchers" [0m
+  [4;36;1mResearcher Load (0.6ms)[0m   [0;1mSELECT * FROM "researchers" [0m
+  [4;35;1mNotebook Load (0.3ms)[0m   [0mSELECT * FROM "notebooks" WHERE ("notebooks".researcher_id = 1) LIMIT 1[0m
+  [4;36;1mNotebook Create (0.7ms)[0m   [0;1mINSERT INTO "notebooks" ("created_at", "updated_at", "researcher_id") VALUES('2010-07-12 05:15:45', '2010-07-12 05:15:45', 1)[0m
+  [4;35;1mNotebook Load (0.2ms)[0m   [0mSELECT * FROM "notebooks" WHERE ("notebooks".researcher_id = 2) LIMIT 1[0m
+  [4;36;1mNotebook Create (0.3ms)[0m   [0;1mINSERT INTO "notebooks" ("created_at", "updated_at", "researcher_id") VALUES('2010-07-12 05:15:45', '2010-07-12 05:15:45', 2)[0m
+  [4;35;1mNotebook Load (0.1ms)[0m   [0mSELECT * FROM "notebooks" WHERE ("notebooks".researcher_id = 3) LIMIT 1[0m
+  [4;36;1mNotebook Create (0.3ms)[0m   [0;1mINSERT INTO "notebooks" ("created_at", "updated_at", "researcher_id") VALUES('2010-07-12 05:15:45', '2010-07-12 05:15:45', 3)[0m
+  [4;35;1mNotebook Load (0.2ms)[0m   [0mSELECT * FROM "notebooks" WHERE ("notebooks".researcher_id = 4) LIMIT 1[0m
+  [4;36;1mNotebook Create (0.3ms)[0m   [0;1mINSERT INTO "notebooks" ("created_at", "updated_at", "researcher_id") VALUES('2010-07-12 05:15:45', '2010-07-12 05:15:45', 4)[0m
+  [4;35;1mNotebook Load (0.2ms)[0m   [0mSELECT * FROM "notebooks" WHERE ("notebooks".researcher_id = 5) LIMIT 1[0m
+  [4;36;1mNotebook Create (0.3ms)[0m   [0;1mINSERT INTO "notebooks" ("created_at", "updated_at", "researcher_id") VALUES('2010-07-12 05:15:45', '2010-07-12 05:15:45', 5)[0m
+  [4;35;1mNotebook Load (0.1ms)[0m   [0mSELECT * FROM "notebooks" WHERE ("notebooks".researcher_id = 6) LIMIT 1[0m
+  [4;36;1mNotebook Create (0.2ms)[0m   [0;1mINSERT INTO "notebooks" ("created_at", "updated_at", "researcher_id") VALUES('2010-07-12 05:15:45', '2010-07-12 05:15:45', 6)[0m
+  [4;35;1mNotebook Load (0.1ms)[0m   [0mSELECT * FROM "notebooks" WHERE ("notebooks".researcher_id = 7) LIMIT 1[0m
+  [4;36;1mNotebook Create (0.3ms)[0m   [0;1mINSERT INTO "notebooks" ("created_at", "updated_at", "researcher_id") VALUES('2010-07-12 05:15:45', '2010-07-12 05:15:45', 7)[0m
+  [4;35;1mNotebook Load (0.1ms)[0m   [0mSELECT * FROM "notebooks" WHERE ("notebooks".researcher_id = 8) LIMIT 1[0m
+  [4;36;1mNotebook Create (0.3ms)[0m   [0;1mINSERT INTO "notebooks" ("created_at", "updated_at", "researcher_id") VALUES('2010-07-12 05:15:45', '2010-07-12 05:15:45', 8)[0m
+  [4;35;1mNotebook Load (0.2ms)[0m   [0mSELECT * FROM "notebooks" WHERE ("notebooks".researcher_id = 9) LIMIT 1[0m
+  [4;36;1mNotebook Update (0.3ms)[0m   [0;1mUPDATE "notebooks" SET "updated_at" = '2010-07-12 05:15:45', "researcher_id" = NULL WHERE "id" = 4[0m
+  [4;35;1mNotebook Create (0.4ms)[0m   [0mINSERT INTO "notebooks" ("created_at", "updated_at", "researcher_id") VALUES('2010-07-12 05:15:45', '2010-07-12 05:15:45', 9)[0m
+  [4;36;1mResearcher Create (0.5ms)[0m   [0;1mINSERT INTO "researchers" ("name", "created_at", "updated_at") VALUES('McCarthy', '2010-07-12 05:16:17', '2010-07-12 05:16:17')[0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" WHERE ("researchers"."id" = 10) [0m
+  [4;36;1mNotebook Load (0.2ms)[0m   [0;1mSELECT * FROM "notebooks" WHERE ("notebooks".researcher_id = 10) LIMIT 1[0m
+  [4;36;1mResearcher Load (0.2ms)[0m   [0;1mSELECT * FROM "researchers" WHERE ("researchers"."id" = 10) [0m
+  [4;35;1mNotebook Load (0.1ms)[0m   [0mSELECT * FROM "notebooks" WHERE ("notebooks".researcher_id = 10) LIMIT 1[0m
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" WHERE ("researchers"."id" = 10) [0m
+  [4;35;1mNotebook Load (0.2ms)[0m   [0mSELECT * FROM "notebooks" WHERE ("notebooks".researcher_id = 10) LIMIT 1[0m
+  [4;36;1mNotebook Create (0.6ms)[0m   [0;1mINSERT INTO "notebooks" ("created_at", "updated_at", "researcher_id") VALUES('2010-07-12 05:17:00', '2010-07-12 05:17:00', 10)[0m
+  [4;35;1mResearcher Create (0.8ms)[0m   [0mINSERT INTO "researchers" ("name", "created_at", "updated_at") VALUES('Curry', '2010-07-12 05:17:28', '2010-07-12 05:17:28')[0m
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;36;1mNotebook Load (0.2ms)[0m   [0;1mSELECT * FROM "notebooks" WHERE ("notebooks".researcher_id = 11) LIMIT 1[0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;36;1mResearcher Create (0.5ms)[0m   [0;1mINSERT INTO "researchers" ("name", "created_at", "updated_at") VALUES('Schoenfinkel', '2010-07-12 05:21:59', '2010-07-12 05:21:59')[0m
+  [4;35;1mResearcher Load (0.4ms)[0m   [0mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;36;1mNotebook Load (0.2ms)[0m   [0;1mSELECT * FROM "notebooks" WHERE ("notebooks".researcher_id = 12) LIMIT 1[0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" LIMIT 1[0m
+  [4;36;1mResearcher Load (0.3ms)[0m   [0;1mSELECT * FROM "researchers" LIMIT 1[0m
+  [4;35;1mNotebook Load (0.2ms)[0m   [0mSELECT * FROM "notebooks" WHERE ("notebooks".researcher_id = 1) LIMIT 1[0m
+  [4;36;1mResearcher Create (0.8ms)[0m   [0;1mINSERT INTO "researchers" ("name", "created_at", "updated_at") VALUES('Smullyan', '2010-07-12 07:06:44', '2010-07-12 07:06:44')[0m
+  [4;35;1mResearcher Load (0.3ms)[0m   [0mSELECT * FROM "researchers" ORDER BY researchers.id DESC LIMIT 1[0m
+  [4;36;1mNotebook Load (0.2ms)[0m   [0;1mSELECT * FROM "notebooks" WHERE ("notebooks".researcher_id = 13) LIMIT 1[0m

@@ -5,4 +5,8 @@ class ResearcherTest < ActiveSupport::TestCase
   test "the truth" do
     assert true
   end
+
+  test_researcher do
+    gordon = Reseacher.create()
+  end
 end

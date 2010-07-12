@@ -1,18 +1,24 @@
-<h1>Listing projects</h1>
+<h1>Researchers by Projects </h1>
 
 <table>
-  <tr>
-    <th>Name</th>
-  </tr>
 
 <% @projects.each do |project| %>
   <tr>
-    <td><%=h project.name %></td>
+    <td><B><%=h project.name %></B></td>
     <td><%= link_to 'Show', project %></td>
     <td><%= link_to 'Edit', edit_project_path(project) %></td>
     <td><%= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
+
+
+  <% project.researchers.each do | researcher| %>
+  <tr> <td> <%= researcher.name %> </td> </tr>
+    <% end %>
+
+
+
 <% end %>
+
 </table>
 
 <br />
